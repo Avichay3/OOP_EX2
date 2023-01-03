@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b208003-bbc7-4b84-b58f-c63f94d17e62" name="Changes" comment="create a TaskType enum">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0b208003-bbc7-4b84-b58f-c63f94d17e62" name="Changes" comment="create a TaskType enum" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +26,7 @@
       </GitPushTagMode>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$PROJECT_DIR$/../../../../../../../Program Files/Java/jdk-17/lib/src.zip!/java.base/java/lang/Enum.java" root0="SKIP_INSPECTION" />
@@ -85,7 +84,28 @@
       <option name="project" value="LOCAL‎" />
       <updated>1672780605283</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL‎-00005" summary="create a TaskType enum">
+      <created>1672780814486</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL‎-00005" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1672780814486</updated>
+    </task>
+    <task id="LOCAL‎-00006" summary="create a TaskType enum">
+      <created>1672780988825</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL‎-00006" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1672780988825</updated>
+    </task>
+    <task id="LOCAL‎-00007" summary="create a TaskType enum">
+      <created>1672781016732</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL‎-00007" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1672781016732</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
