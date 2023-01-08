@@ -1,43 +1,37 @@
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.Callable;
-import java.util.concurrent.Future;
-import java.util.concurrent.PriorityBlockingQueue;
+import java.util.concurrent.*;
 
 public class CustomExecutor {
 
-   private PriorityBlockingQueue<Task> tasks;
+   private final PriorityBlockingQueue<Runnable> tasks;
+   private int max_prior;
 
-    final int halfProcessors = Runtime.getRuntime().availableProcessors()/2;
-    final int maxProcessors = Runtime.getRuntime().availableProcessors() -1;
+   private final ThreadPoolExecutor executor;
 
     public CustomExecutor(){
-        PriorityBlockingQueue<Task> tasks = new PriorityBlockingQueue<Task>();
+        this.tasks = new PriorityBlockingQueue<>();
+        final int halfProcessors = Runtime.getRuntime().availableProcessors()/2;
+        final int maxProcessors = Runtime.getRuntime().availableProcessors() -1;
+        this.executor = new ThreadPoolExecutor(halfProcessors, maxProcessors, 300, TimeUnit.MILLISECONDS, tasks);
     }
 
     public <T>Future<T> submit (Task<T> task){
-        return
+        this.max_prior = task.getPriority_of_task();
+        return executor.submit(task);
     }
 
-    public <T>Future<T> submit (Callable<T> task, TaskType type){
-        return
+    public <T>Future<T> submit (Callable<T> task,  TaskType type){ //section
+        return submit(new Task<>( task, type));
     }
 
-    public <T>Future<T> submit (Callable<T> task){
-
+    public <T>Future<T> submit (Callable<T> callable){
+        return submit(new Task<T> (callable));
     }
-
-
-
-
-//    }
-//    public void submit ()
 
     public void gracefullyTerminate() {
+        executor.shutdown();
     }
 
-    public String getCurrentMax() {
-        return null;
-    }
-
-
+    public int getCurrentMax() {
+        return this.max_prior;
+}
 }

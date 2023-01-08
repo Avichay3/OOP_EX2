@@ -45,8 +45,8 @@ class Tests {
         final Double totalPrice;
         final String reversed;
         try {
-            totalPrice = priceTask.get();
-            reversed = reverseTask.get();
+            totalPrice = (Double) priceTask.get();
+            reversed = (String) reverseTask.get();
         } catch (Exception e) {
             throw new RuntimeException();
         }

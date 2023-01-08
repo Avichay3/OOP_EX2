@@ -16,7 +16,12 @@ public class Task<T> implements Callable<T>, Comparable<Task<T>> {
     }
 
     public static Task createTask(Callable task){ //section 3 in the assignment
+
         return new Task(task);
+    }
+
+    public int getPriority_of_task() {
+        return priority_of_task;
     }
 
     public static Task createTask(Callable task, TaskType taskType) { //section 4 int the assignment
@@ -27,7 +32,7 @@ public class Task<T> implements Callable<T>, Comparable<Task<T>> {
     public int compareTo(Task<T> task2) { //section 5 in the assignment
         int res = this.priority_of_task - task2.priority_of_task;
         if(res == 0){
-            return 1;
+            return 0;
         } else if (res < 0) {
             return -1;
         }
